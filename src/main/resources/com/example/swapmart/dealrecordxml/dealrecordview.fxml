@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="544.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom right, #1f1f2e, #2c2c3e);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swapmart.dealrecordcontrol.dealrecordcontroller">
+
+    <children>
+        <!-- Filter Section -->
+        <VBox layoutX="30" layoutY="30" spacing="10" />
+
+        <!-- Table Section -->
+        <TableView fx:id="dealTable" layoutX="33.0" layoutY="206.0" prefHeight="300" prefWidth="734.0">
+            <columns>
+                <TableColumn fx:id="colDealId" prefWidth="80" text="Deal ID" />
+                <TableColumn fx:id="colBuyerId" prefWidth="100" text="Buyer ID" />
+                <TableColumn fx:id="colSellerId" prefWidth="100" text="Seller ID" />
+                <TableColumn fx:id="colProductId" prefWidth="100" text="Product ID" />
+                <TableColumn fx:id="colAmount" prefWidth="100" text="Amount" />
+                <TableColumn fx:id="colDealType" prefWidth="100" text="Deal Type" />
+                <TableColumn fx:id="colNotes" prefWidth="150" text="Notes" />
+            </columns>
+        </TableView>
+          <Button fx:id="exportBtn" layoutX="135.0" layoutY="163.0" onAction="#handleExport" style="-fx-background-color:#27ae60; -fx-text-fill:white; -fx-font-weight:bold;" text="Export to Excel" />
+          <Button fx:id="searchBtn" layoutX="35.0" layoutY="163.0" onAction="#handleSearch" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color:#2980b9; -fx-text-fill:white; -fx-font-weight:bold;" text="Search" />
+          <ComboBox fx:id="buyerIdCombo" layoutX="35.0" layoutY="118.0" prefWidth="200" promptText="User ID" />
+          <Label layoutX="39.0" layoutY="92.0" text="Buyer ID" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c073a" height="76.0" layoutX="10.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="784.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Label layoutX="290.0" layoutY="30.0" text="DEALS RECORD" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="76.0" fitWidth="108.0" layoutX="127.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-14%20091425.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="108.0" layoutX="592.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-14%20091425.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

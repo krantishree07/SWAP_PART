@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="729.0" prefWidth="946.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swapmart.userrecordcontrol.userrecordcontroller">
+
+    <children>
+        <!-- Header -->
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#14324e" height="118.0" stroke="BLACK" strokeType="INSIDE" width="946.0" />
+
+        <!-- Main Card -->
+        <Rectangle arcHeight="25" arcWidth="25" fill="#ffffffee" height="550" layoutX="10.0" layoutY="127.0" width="926.0">
+            <effect>
+                <DropShadow color="#00000033" radius="20" />
+            </effect>
+        </Rectangle>
+
+        <!-- Left Header Icon -->
+        <ImageView fitHeight="83.0" fitWidth="81.0" layoutX="120.0" layoutY="20.0" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../../../Users/krant/Downloads/customer-database-icon-outline-illustration-vector.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Right Header Icon -->
+        <ImageView fitHeight="83.0" fitWidth="81.0" layoutX="745.0" layoutY="20.0" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../../../Users/krant/Downloads/customer-database-icon-outline-illustration-vector.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Title (Centered) -->
+        <Label layoutX="260.0" layoutY="40.0" style="-fx-font-size:26px; -fx-font-weight:bold; -fx-text-fill:white;" text="SWAP MART CLIENT RECORD" />
+
+        <!-- User Type -->
+        <Label layoutX="40.0" layoutY="162.0" style="-fx-font-size:16px; -fx-font-weight:bold;" text="User Type" />
+        <ComboBox fx:id="userTypeCombo" layoutX="140.0" layoutY="162.0" prefHeight="25.0" prefWidth="130.0" promptText="Select Role" />
+
+        <!-- Show Button -->
+        <Button layoutX="40.0" layoutY="216.0" onAction="#showRecords" prefHeight="25.0" prefWidth="230.0" text="Show Record" />
+
+        <!-- Table -->
+        <TableView fx:id="tableView" layoutX="40.0" layoutY="264.0" prefHeight="300" prefWidth="866.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="80" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="120" text="Name" />
+                <TableColumn fx:id="colEmail" prefWidth="150" text="Email" />
+                <TableColumn fx:id="colPhone" prefWidth="120" text="Phone" />
+                <TableColumn fx:id="colAddress" prefWidth="200.0" text="Address" />
+                <TableColumn fx:id="colRole" prefWidth="100" text="Role" />
+                <TableColumn fx:id="colPhoto" prefWidth="120" text="Photo" />
+            </columns>
+        </TableView>
+
+        <!-- Export Button -->
+        <Button layoutX="348.0" layoutY="596.0" onAction="#exportToExcel" prefHeight="44.0" prefWidth="250.0" text="Export to Excel">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+
+        <!-- Export Icon -->
+        <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="359.0" layoutY="601.0" preserveRatio="true">
+            <image>
+                <Image url="@Screenshot_31-7-2025_135054_www.bing.com.jpeg" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="922.0" style="-fx-background-color: linear-gradient(to bottom right, #1f1f2e, #2c2c3e);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swapmart.securedealcontrol.securedealcontroller">
+
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#48485d" height="60.0" layoutX="17.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="888.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+
+        <!-- Title -->
+        <Label layoutX="339.0" layoutY="25.0" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" text="SECURE YOUR DEAL">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+
+        <!-- Buyer Section -->
+        <Label layoutX="50" layoutY="80" style="-fx-text-fill: #ffffff; -fx-font-size:18px; -fx-font-weight:bold;" text="Buyer Details" />
+        <Label layoutX="50" layoutY="120" style="-fx-text-fill: #cccccc;" text="Buyer ID" />
+        <TextField fx:id="buyerIdField" layoutX="150" layoutY="115" onAction="#handleBuyerId" style="-fx-background-color: #44445a; -fx-text-fill: white; -fx-background-radius: 10;" />
+        <Label layoutX="50" layoutY="160" style="-fx-text-fill: #cccccc;" text="Buyer Name" />
+        <TextField fx:id="buyerNameField" editable="false" layoutX="150" layoutY="155" style="-fx-background-color: #55556a; -fx-text-fill: white; -fx-background-radius: 10;" />
+
+        <!-- Seller Section -->
+        <Label layoutX="500" layoutY="80" style="-fx-text-fill: #ffffff; -fx-font-size:18px; -fx-font-weight:bold;" text="Seller Details" />
+        <Label layoutX="500" layoutY="120" style="-fx-text-fill: #cccccc;" text="Seller ID" />
+        <TextField fx:id="sellerIdField" editable="false" layoutX="600" layoutY="115" onAction="#handleSellerId" style="-fx-background-color: #44445a; -fx-text-fill: white; -fx-background-radius: 10;" />
+        <Label layoutX="500" layoutY="160" style="-fx-text-fill: #cccccc;" text="Seller Name" />
+        <TextField fx:id="sellerNameField" editable="false" layoutX="600" layoutY="155" style="-fx-background-color: #55556a; -fx-text-fill: white; -fx-background-radius: 10;" />
+
+        <!-- Product Section -->
+        <Label layoutX="50" layoutY="220" style="-fx-text-fill: #ffffff; -fx-font-size:18px; -fx-font-weight:bold;" text="Product Details" />
+        <Label layoutX="50" layoutY="260" style="-fx-text-fill: #cccccc;" text="Product ID" />
+        <TextField fx:id="productIdField" layoutX="150" layoutY="255" style="-fx-background-color: #44445a; -fx-text-fill: white; -fx-background-radius: 10;" />
+        <Label layoutX="50" layoutY="300" style="-fx-text-fill: #cccccc;" text="Product Name" />
+        <TextField fx:id="productNameField" editable="false" layoutX="150" layoutY="295" style="-fx-background-color: #55556a; -fx-text-fill: white; -fx-background-radius: 10;" />
+        <Label layoutX="50" layoutY="340" style="-fx-text-fill: #cccccc;" text="Category" />
+        <TextField fx:id="categoryField" editable="false" layoutX="150" layoutY="335" style="-fx-background-color: #55556a; -fx-text-fill: white; -fx-background-radius: 10;" />
+        <Label layoutX="50" layoutY="380" style="-fx-text-fill: #cccccc;" text="Condition" />
+        <TextField fx:id="conditionField" editable="false" layoutX="150" layoutY="375" style="-fx-background-color: #55556a; -fx-text-fill: white; -fx-background-radius: 10;" />
+        <Label layoutX="50" layoutY="420" style="-fx-text-fill: #cccccc;" text="Description" />
+        <TextArea fx:id="descriptionField" editable="false" layoutX="150.0" layoutY="415.0" prefHeight="60" prefWidth="300" style="-fx-control-inner-background: #55556a; -fx-text-fill: white; -fx-background-radius: 10;" wrapText="true" />
+
+        <!-- Deal Section -->
+        <Label layoutX="496.0" layoutY="213.0" style="-fx-text-fill: #ffffff; -fx-font-size:18px; -fx-font-weight:bold;" text="Deal Details" />
+        <Label layoutX="497.0" layoutY="259.0" style="-fx-text-fill: #cccccc;" text="Deal Amount" />
+        <TextField fx:id="amountField" editable="false" layoutX="600.0" layoutY="255.0" style="-fx-background-color: #44445a; -fx-text-fill: white; -fx-background-radius: 10;" />
+        <Label layoutX="496.0" layoutY="299.0" style="-fx-text-fill: #cccccc;" text="Deal Type" />
+        <ComboBox fx:id="dealTypeCombo" layoutX="600.0" layoutY="296.0" prefWidth="150" style="-fx-background-color: #44445a; -fx-text-fill: white; -fx-background-radius: 10;" />
+        <Label layoutX="499.0" layoutY="331.0" style="-fx-text-fill: #cccccc;" text="Notes" />
+        <TextArea fx:id="notesField" layoutX="600.0" layoutY="340.0" prefHeight="80" prefWidth="300" style="-fx-control-inner-background: #55556a; -fx-text-fill: white; -fx-background-radius: 10;" wrapText="true" />
+        <Label layoutX="498.0" layoutY="449.0" style="-fx-text-fill: #cccccc;" text="Status" />
+        <TextField fx:id="statusField" editable="false" layoutX="600.0" layoutY="445.0" style="-fx-background-color: #55556a; -fx-text-fill: white; -fx-background-radius: 10;" />
+
+        <!-- Buttons -->
+        <Button layoutX="320.0" layoutY="555.0" onAction="#handleSecure" prefWidth="130" style="-fx-background-color: #00c853; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12;" text="🔐 Secure Deal" />
+        <Button layoutX="468.0" layoutY="555.0" onAction="#handleSearch" prefWidth="130" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12;" text="🔍 Search Deal" />
+      <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="212.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-14%20091354.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="675.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-14%20091354.png" />
+         </image>
+      </ImageView>
+
+    </children>
+</AnchorPane>

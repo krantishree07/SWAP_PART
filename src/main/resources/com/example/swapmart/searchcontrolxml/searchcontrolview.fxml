@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700" prefWidth="1052.0" style="-fx-background-color: linear-gradient(to bottom right, #1f1f2e, #2c2c3e);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swapmart.searchcontrol.buyersearchcontroller">
+
+    <children>
+
+        <!-- Background Card -->
+        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#2c2c3e" height="565.0" layoutX="12.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="1029.0">
+            <effect>
+                <DropShadow />
+            </effect>
+        </Rectangle>
+
+        <!-- Heading with Symmetry -->
+        <Label layoutX="364.0" layoutY="20.0" prefHeight="47.0" prefWidth="300.0" style="-fx-font-weight: bold;" text="SEARCH PRODUCTS" textFill="WHITE">
+            <font><Font size="32.0" /></font>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Label>
+
+        <!-- Left Icon -->
+        <ImageView fitHeight="65.0" fitWidth="73.0" layoutX="270.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-13%20212402.png" />
+            </image>
+        </ImageView>
+
+        <!-- Right Icon -->
+        <ImageView fitHeight="65.0" fitWidth="73.0" layoutX="704.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-13%20212402.png" />
+            </image>
+        </ImageView>
+
+        <!-- Filters Row -->
+        <Label layoutX="34.0" layoutY="158.0" text="Category" textFill="WHITE">
+            <font><Font size="18.0" /></font>
+        </Label>
+        <ComboBox fx:id="categoryCombo" layoutX="113.0" layoutY="158.0" prefHeight="30.0" prefWidth="131.0" promptText="Select Category" />
+
+        <Label layoutX="270.0" layoutY="159.0" text="Object Name" textFill="WHITE">
+            <font><Font size="18.0" /></font>
+        </Label>
+        <ComboBox fx:id="objectNameCombo" layoutX="384.0" layoutY="158.0" prefHeight="30.0" prefWidth="131.0" promptText="Select Object" />
+
+        <Button fx:id="searchBtn" layoutX="673.0" layoutY="157.0" onAction="#handleSearch" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold;" text="Search" />
+
+        <!-- TableView (ObjectId + Photos) -->
+        <TableView fx:id="tableView" layoutX="34.0" layoutY="216.0" prefHeight="420.0" prefWidth="482.0">
+            <columns>
+                <TableColumn fx:id="colObjectId" prefWidth="80" text="Product ID" />
+                <TableColumn fx:id="colFrontImage" prefWidth="200" text="Front Photo" />
+                <TableColumn fx:id="colBackImage" prefWidth="200" text="Back Photo" />
+            </columns>
+        </TableView>
+
+        <!-- Detail Panel -->
+        <VBox fx:id="detailPane" layoutX="535.0" layoutY="216.0" prefHeight="420.0" prefWidth="482.0" spacing="10" style="-fx-background-color:#3a3a4d; -fx-padding:20; -fx-background-radius:10;">
+            <children>
+                <Label fx:id="lblObjectName" textFill="WHITE" />
+                <Label fx:id="lblCategory" textFill="WHITE" />
+                <Label fx:id="lblCondition" textFill="WHITE" />
+                <Label fx:id="lblDescription" textFill="WHITE" />
+                <Label fx:id="lblExpectedSwap" textFill="WHITE" />
+                <Label fx:id="lblPrice" textFill="WHITE" />
+                <Label fx:id="lblSellerName" textFill="WHITE" />
+                <Label fx:id="lblSellerNumber" textFill="WHITE" />
+                <Label fx:id="lblStatus" textFill="WHITE" />
+                <Label fx:id="lblSellerId" textFill="WHITE" />
+            </children>
+         <effect>
+            <DropShadow />
+         </effect>
+        </VBox>
+
+    </children>
+</AnchorPane>

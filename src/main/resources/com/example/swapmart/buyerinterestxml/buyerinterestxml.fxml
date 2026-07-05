@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="idtxt" prefHeight="608.0" prefWidth="837.0" style="-fx-background-color: linear-gradient(to bottom right, #1f1f2e, #2c2c3e);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swapmart.buyerinterestcontrol.buyerinterestcontroller">
+
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6d6080" height="107.0" layoutX="-8.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="889.0" />
+      <ImageView fitHeight="107.0" fitWidth="133.0" layoutX="82.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-13%20223913.png" />
+         </image>
+      </ImageView>
+
+        <!-- Title -->
+        <Label layoutX="278.0" layoutY="39.0" prefHeight="33.0" prefWidth="306.0" style="-fx-text-fill: #ffffff; -fx-font-size: 22px; -fx-font-weight: bold;" text="ADD YOUR INTEREST HERE ">
+         <font>
+            <Font size="29.0" />
+         </font></Label>
+
+        <!-- User ID -->
+        <Label layoutX="205.0" layoutY="145.0" style="-fx-text-fill: #cccccc;" text="User ID" />
+        <TextField fx:id="idtxtx" layoutX="300.0" layoutY="137.0" prefWidth="280" style="-fx-background-radius: 12; -fx-padding: 8; -fx-background-color: #44445a; -fx-text-fill: #bbbbbb;" />
+
+        <!-- Name -->
+        <Label layoutX="201.0" layoutY="203.0" style="-fx-text-fill: #cccccc;" text="👤 Name" />
+        <TextField fx:id="nameField1" editable="false" layoutX="301.0" layoutY="195.0" prefWidth="280" style="-fx-background-radius: 12; -fx-padding: 8; -fx-background-color: #44445a; -fx-text-fill: #bbbbbb;" />
+
+        <!-- Phone -->
+        <Label layoutX="199.0" layoutY="260.0" style="-fx-text-fill: #cccccc;" text="📞 Phone" />
+        <TextField fx:id="phoneField" editable="false" layoutX="300.0" layoutY="252.0" prefWidth="280" style="-fx-background-radius: 12; -fx-padding: 8; -fx-background-color: #44445a; -fx-text-fill: #bbbbbb;" />
+
+        <!-- Message -->
+        <TextArea fx:id="messageField" layoutX="300.0" layoutY="315.0" prefHeight="90" prefWidth="280.0" promptText="💬 Write your interest..." style="-fx-control-inner-background: #3a3a4f; -fx-background-color: #3a3a4f; -fx-text-fill: white; -fx-prompt-text-fill: #bbbbbb; -fx-caret-color: white; -fx-background-radius: 12; -fx-padding: 8;" wrapText="true" />
+
+        <!-- Address -->
+        <TextField fx:id="addressField" layoutX="300.0" layoutY="420.0" prefWidth="280" promptText="📍 Address (optional)" style="-fx-background-radius: 12; -fx-padding: 8; -fx-background-color: #3a3a4f; -fx-text-fill: white;" />
+
+        <!-- Submit Button -->
+        <Button layoutX="47.0" layoutY="520.0" onAction="#handleSubmit" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to right, #00c853, #2ecc71); -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="🚀 Submit Interest" />
+
+        <!-- CRUD Buttons -->
+        <Button layoutX="251.0" layoutY="520.0" onAction="#handleSearch" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="🔍 Search" />
+
+        <Button layoutX="450.0" layoutY="520.0" onAction="#handleUpdate" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="✏ Update" />
+
+        <Button layoutX="667.0" layoutY="520.0" onAction="#handleDelete" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="🗑 Delete" />
+      <Label layoutX="206.0" layoutY="315.0" prefHeight="25.0" prefWidth="133.0" style="-fx-text-fill: #cccccc;" text="💬  Interest." />
+      <Label layoutX="200.0" layoutY="424.0" prefHeight="25.0" prefWidth="133.0" style="-fx-text-fill: #cccccc;" text="📍 Address " />
+      <ImageView fitHeight="107.0" fitWidth="108.0" layoutX="638.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-13%20223913.png" />
+         </image>
+      </ImageView>
+
+    </children>
+</AnchorPane>

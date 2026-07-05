@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="729" prefWidth="920" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swapmart.usercontrol.usercontroller">
+
+   <children>
+      <!-- Background -->
+      <ImageView fitHeight="729.0" fitWidth="920.0" layoutY="-2.0" opacity="0.67" preserveRatio="true">
+         <image>
+            <javafx.scene.image.Image url="@backgroundshoppingobject.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="729.0" fitWidth="920.0" layoutY="1.0" opacity="0.66">
+         <image>
+            <javafx.scene.image.Image url="@background shopping Image.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+
+      <!-- Header -->
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7f4fcd4" height="112.0" layoutX="-1.0" layoutY="-2.0" width="920.0">
+         <effect>
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#e5c3c3" height="78.0" layoutX="570.0" layoutY="14.0" stroke="BLACK" width="311.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+
+      <!-- Title -->
+      <Label layoutX="26.0" layoutY="18.0" prefHeight="71.0" prefWidth="534.0" text="CREATE AN ACCOUNT ON">
+         <font>
+            <Font name="NSimSun" size="52.0" />
+         </font>
+      </Label>
+
+      <!-- Glass Card -->
+      <Rectangle arcHeight="25" arcWidth="25" fill="WHITE" height="413.0" layoutX="54.0" layoutY="140.0" opacity="0.84" width="818.0">
+         <effect>
+            <DropShadow color="#00000055" radius="35" spread="0.2" />
+         </effect>
+      </Rectangle>
+
+      <!-- Form Fields -->
+      <Label layoutX="230" layoutY="200" style="-fx-font-size:20;" text="Name :" />
+      <TextField fx:id="nametxt" layoutX="350" layoutY="200" prefWidth="300" />
+
+      <Label layoutX="230" layoutY="250" style="-fx-font-size:20;" text="Email :" />
+      <TextField fx:id="emailtxt" layoutX="350" layoutY="250" prefWidth="300" />
+
+      <Label layoutX="230" layoutY="300" style="-fx-font-size:20;" text="Phone :" />
+      <TextField fx:id="phonetxt" layoutX="350" layoutY="300" prefWidth="300" />
+
+      <Label layoutX="230" layoutY="350" style="-fx-font-size:20;" text="Address :" />
+      <TextField fx:id="addresstxt" layoutX="350" layoutY="350" prefWidth="300" />
+
+      <Label layoutX="230" layoutY="400" style="-fx-font-size:20;" text="Role :" />
+      <ComboBox fx:id="selectroletxt" layoutX="350" layoutY="400" prefWidth="300" />
+
+      <Label layoutX="220.0" layoutY="450.0" style="-fx-font-size:20;" text="User ID (Auto) :" />
+      <TextField fx:id="idtxt" layoutX="382.0" layoutY="452.0" prefHeight="25.0" prefWidth="267.0" />
+      <Button fx:id="uploadButton" layoutX="716.0" layoutY="337.0" prefWidth="120" style="-fx-background-color:#2c3e50; -fx-text-fill:white;" text="Upload Photo" />
+
+      <!-- Square Photo Box -->
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#ffffffee" height="120.0" layoutX="716.0" layoutY="190.0" stroke="#2c3e50" strokeWidth="2" width="120.0">
+         <effect>
+            <DropShadow color="#00000055" radius="10" />
+         </effect>
+      </Rectangle>
+      <ImageView fx:id="uploadedImage" fitHeight="112.0" fitWidth="112.0" layoutX="720.0" layoutY="194.0" preserveRatio="true" style="-fx-background-color:#f0f0f0; -fx-border-color:#2c3e50;" />
+
+      <!-- Buttons -->
+      <Button layoutX="84.0" layoutY="202.0" onAction="#dosave" prefHeight="25.0" prefWidth="92.0" text="Save" />
+      <Button layoutX="84.0" layoutY="452.0" onAction="#dodelete" prefHeight="25.0" prefWidth="92.0" text="Delete" />
+      <Button layoutX="84.0" layoutY="267.0" onAction="#doclear" prefHeight="25.0" prefWidth="92.0" text="Clear" />
+      <Button layoutX="81.0" layoutY="387.0" onAction="#doupdate" prefHeight="25.0" prefWidth="98.0" text="Update" />
+      <Button layoutX="81.0" layoutY="324.0" onAction="#dosearch" prefHeight="25.0" prefWidth="98.0" text="Search" />
+
+      <!-- App Title -->
+      <Label layoutX="577.0" layoutY="9.0" prefHeight="88.0" prefWidth="321.0" text="SWAP MART">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="62.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

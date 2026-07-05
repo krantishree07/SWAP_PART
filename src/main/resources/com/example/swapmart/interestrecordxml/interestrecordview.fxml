@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="652.0" prefWidth="904.0" style="-fx-background-color: linear-gradient(to bottom right,#EAF4FF,#D8ECFF);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swapmart.interestrecordcontrol.interestrecordcontroller">
+
+    <!-- Main Card -->
+    <VBox layoutX="50" layoutY="30" prefHeight="594.0" prefWidth="820.0" spacing="20" style="-fx-background-color:white;                  -fx-background-radius:20;                  -fx-padding:25;                  -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.15),12,0,0,5);">
+
+        <!-- Heading -->
+        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="628.0">
+         <ImageView fitHeight="79.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-13%20223913.png" />
+            </image>
+         </ImageView>
+            <Label style="-fx-font-size:28;                           -fx-font-weight:bold;                           -fx-text-fill:#1A237E;" text="INTEREST RECORD" />
+         <ImageView fitHeight="79.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-13%20223913.png" />
+            </image>
+         </ImageView>
+        </HBox>
+
+        <!-- Top Buttons -->
+        <HBox spacing="15">
+
+            <Button fx:id="exportToExcel" prefHeight="40" prefWidth="170" style="-fx-background-color:#4CAF50;                            -fx-text-fill:white;                            -fx-font-size:14;                            -fx-font-weight:bold;                            -fx-background-radius:12;                            -fx-cursor:hand;" text="📥 Export To Excel" />
+
+        </HBox>
+
+        <!-- Table -->
+        <TableView fx:id="interestTable" prefHeight="350" style="-fx-background-radius:15;                           -fx-border-radius:15;                           -fx-border-color:#E0E0E0;">
+
+            <columns>
+
+                <TableColumn fx:id="idCol" prefWidth="50" text="ID" />
+
+                <TableColumn fx:id="nameCol" prefWidth="120" text="NAME" />
+
+                <TableColumn fx:id="phoneCol" prefWidth="110" text="PHONE" />
+
+                <TableColumn fx:id="messageCol" prefWidth="180" text="MESSAGE" />
+
+                <TableColumn fx:id="addressCol" prefWidth="170" text="ADDRESS" />
+
+                <TableColumn fx:id="createdAtCol" prefWidth="120" text="CREATED AT" />
+
+            </columns>
+
+        </TableView>
+
+    </VBox>
+
+</AnchorPane>

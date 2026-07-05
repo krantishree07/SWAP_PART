@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="639.0" prefWidth="802.0" style="-fx-background-color: linear-gradient(to bottom, #3498db, #2c3e50);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swapmart.logincontrol.logincontroller">
+
+    <children>
+        <!-- Background -->
+        <ImageView fitHeight="641.0" fitWidth="817.0" layoutY="-2.0" preserveRatio="true">
+            <image>
+                <Image url="@../userxml/backgroundshoppingobject.png" />
+            </image>
+        </ImageView>
+
+        <!-- Main 3D Box -->
+        <Rectangle arcHeight="25" arcWidth="25" fill="WHITE" height="531.0" layoutX="120.0" layoutY="54.0" opacity="0.92" strokeWidth="0.0" width="568.0">
+            <effect>
+                <DropShadow color="#00000055" radius="35" spread="0.25" />
+            </effect>
+        </Rectangle>
+
+        <!-- Title -->
+        <Label layoutX="335.0" layoutY="104.0" prefHeight="35.0" prefWidth="151.0" style="-fx-font-size:24px; -fx-font-weight:bold; -fx-text-fill:#2c3e50;" text="LOGIN HERE">
+         <font>
+            <Font size="31.0" />
+         </font></Label>
+
+        <!-- Password Label -->
+        <Label layoutX="251.0" layoutY="226.0" style="-fx-text-fill:black; -fx-font-size:14px; -fx-font-weight:bold;" text="🔒 Password" />
+
+        <!-- Username Label -->
+        <Label layoutX="249.0" layoutY="283.0" style="-fx-text-fill:black; -fx-font-size:14px; -fx-font-weight:bold;" text="👤 Username" />
+
+        <!-- Password Field -->
+        <PasswordField fx:id="passwordField" layoutX="358.0" layoutY="222.0" promptText="Password" style="-fx-background-radius:5; -fx-border-color:#2980b9; -fx-border-radius:5;" />
+
+        <!-- Username Field -->
+        <TextField fx:id="usernameField" layoutX="358.0" layoutY="279.0" promptText="Username" style="-fx-background-radius:5; -fx-border-color:#2980b9; -fx-border-radius:5;" />
+
+        <!-- Login Button -->
+        <Button fx:id="loginBtn" layoutX="315.0" layoutY="372.0" onAction="#handleLogin" prefHeight="33.0" prefWidth="177.0" style="-fx-background-color:#2980b9; -fx-text-fill:white; -fx-font-weight:bold; -fx-background-radius:5; -fx-padding:8 20 8 20;" text="Login" />
+
+        <!-- Forgot Password Label -->
+        <Label layoutX="348.0" layoutY="436.0" style="-fx-text-fill:#e74c3c; -fx-font-size:13px; -fx-font-style:italic;" />
+
+        <!-- Tagline -->
+        <Label layoutX="340.0" layoutY="484.0" style="-fx-font-size:16px; -fx-font-weight:bold; -fx-text-fill:#16a085;" text="Buy • Sell • Swap" />
+
+        <Label fx:id="messageLabel" layoutX="286.0" layoutY="436.0" prefHeight="20.0" prefWidth="395.0" style="-fx-text-fill:red; -fx-font-size:14px; -fx-font-weight:bold;" text="" />
+
+        <!-- Decorative Images -->
+        <ImageView fitHeight="150.0" fitWidth="108.0" layoutX="183.0" layoutY="68.0" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-13%20233933.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="150.0" fitWidth="108.0" layoutX="542.0" layoutY="68.0" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../../../Users/krant/OneDrive/Pictures/Screenshots/Screenshot%202026-05-13%20233933.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

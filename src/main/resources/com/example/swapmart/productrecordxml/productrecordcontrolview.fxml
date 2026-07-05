@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="602.0" prefWidth="996.0" style="-fx-background-color: linear-gradient(to bottom, #ecf0f1, #bdc3c7);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swapmart.productrecordcontrol.productrecordcontroller">
+
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#180c5f" height="83.0" layoutX="22.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="952.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+
+        <!-- Title -->
+        <Label layoutX="375.0" layoutY="31.0" style="-fx-font-size:26px; -fx-font-weight:bold; -fx-text-fill:#ffffff;" text="PRODUCT RECORDS" textFill="WHITE" />
+
+        <!-- Category Filter -->
+        <Label layoutX="35.0" layoutY="141.0" style="-fx-font-size:14px; -fx-text-fill:#34495e;" text="Select Category:" />
+
+        <ComboBox fx:id="categoryCombo" layoutX="135.0" layoutY="137.0" prefWidth="200" style="-fx-background-color:#ffffff; -fx-border-color:#2980b9; -fx-border-radius:5;" />
+
+        <Button fx:id="searchBtn" layoutX="35.0" layoutY="182.0" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color:#2980b9; -fx-text-fill:white; -fx-font-weight:bold; -fx-background-radius:5;" text="Search" />
+
+        <!-- Export to XML Button -->
+        <Button fx:id="exportXmlBtn" layoutX="178.0" layoutY="182.0" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color:#27ae60; -fx-text-fill:white; -fx-font-weight:bold; -fx-background-radius:5;" text="Export to XML" />
+
+        <!-- Table -->
+        <TableView fx:id="productTable" layoutX="22.0" layoutY="230.0" prefHeight="350" prefWidth="952.0" style="-fx-background-color:#ffffff; -fx-border-color:#7f8c8d; -fx-border-radius:5;">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="50" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="85.99999237060547" text="Name" />
+                <TableColumn fx:id="colCategory" prefWidth="103.19992065429688" text="Category" />
+                <TableColumn fx:id="colCondition" prefWidth="95.20001220703125" text="Condition" />
+                <TableColumn fx:id="colPrice" prefWidth="91.20001220703125" text="Price" />
+                <TableColumn fx:id="colSellerId" prefWidth="62.800079345703125" text="Seller ID" />
+                <TableColumn fx:id="colSellerName" prefWidth="99.5999755859375" text="Seller Name" />
+                <TableColumn fx:id="colStatus" prefWidth="110.39996337890625" text="Status" />
+
+                <!-- New Photo Columns -->
+                <TableColumn fx:id="colFrontPhoto" prefWidth="122.40008544921875" text="Front Photo" />
+                <TableColumn fx:id="colBackPhoto" prefWidth="126.39996337890625" text="Back Photo" />
+            </columns>
+        </TableView>
+
+        <ImageView fitHeight="83.0" fitWidth="125.0" layoutX="116.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screenshot%202026-05-14%20091412.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="125.0" layoutX="776.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screenshot%202026-05-14%20091412.png" />
+         </image>
+      </ImageView>
+
+
+    </children>
+</AnchorPane>
